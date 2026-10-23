@@ -1,0 +1,178 @@
+// The Weber County Hive — Developments in Weber County
+// To add a project: copy one object below, fill in the fields and save.
+// index.html reads this file and builds the map pins and the project list on its own.
+//
+// lat / lng: an approximate spot for the pin (not a parcel boundary).
+// link: a case file in this repo (e.g. "altura.html") or a full https:// link to another Hive repo.
+// plain: true if this repo has a plain-words version named <link>-plain.html.
+// stage: "proposed" | "approved" | "building" | "financing"  (sets the pin color)
+const DEVELOPMENTS = [
+  {
+    id: "altura",
+    name: "Altura (North Bench)",
+    city: "North Ogden",
+    lat: 41.3340, lng: -111.9500,
+    acres: "about 500",
+    units: "up to 1,637 proposed",
+    stage: "proposed",
+    status: "Tabled by the Planning Commission Sept. 16, 2026; annexation protest deadline Oct. 23, 2026",
+    summary: "Marriott family land on the Ben Lomond foothills. 1,249 single-family homes and 388 condos or townhomes proposed, with 209 acres to be annexed from the county.",
+    link: "altura.html",
+    plain: true,
+    updated: "Oct 22, 2026"
+  },
+  {
+    id: "nordic",
+    name: "Nordic Valley (Nordic Village PIDs)",
+    city: "Ogden Valley",
+    lat: 41.3115, lng: -111.8665,
+    acres: "",
+    units: "637 housing units, 230 hotel rooms (later records)",
+    stage: "financing",
+    status: "Bond payable of $54.5 million at June 30, 2026; budget hearings Dec. 14, 2026",
+    summary: "The 2022 report said up to 550 homes with no public financing. Later records show three PIDs with up to $240 million in borrowing authority.",
+    link: "https://weber-county-hive.github.io/PIDS-Utah/nordic-village-case-file.html",
+    plain: false,
+    updated: "Oct 17, 2026"
+  },
+  {
+    id: "powder",
+    name: "Powder Mountain",
+    city: "Ogden Valley (Weber and Cache counties)",
+    lat: 41.3790, lng: -111.7810,
+    acres: "",
+    units: "",
+    stage: "building",
+    status: "Two concept-plan changes approved 5–0 as administrative items Sept. 8, 2026; fire station broke ground Sept. 24, 2026; water applications E6560 and E6863 pending",
+    summary: "The 2008 record promised an onsite fire station and support for a second way off the mountain. The station is under way; no second road has been built.",
+    link: "https://weber-county-hive.github.io/Transparency/weber-hive-powder-mountain-water.html",
+    plain: false,
+    updated: "Oct 17, 2026"
+  },
+  {
+    id: "eden-crossing",
+    name: "Eden Crossing",
+    city: "Eden",
+    lat: 41.2990, lng: -111.8300,
+    acres: "",
+    units: "",
+    stage: "approved",
+    status: "8.73-acre expansion approved 3–0 Oct. 21, 2025; state asked for more information on water application E6743 Oct. 8, 2026",
+    summary: "Rezoned 2–1 in 2023 over a 5–2 Planning Commission recommendation to deny. A PID option was reserved in the 2023 agreement; none formed as of Sept. 2026.",
+    link: "https://weber-county-hive.github.io/Transparency/weber-hive-then-vs-now.html",
+    plain: false,
+    updated: "Oct 17, 2026"
+  },
+  {
+    id: "cobabe",
+    name: "Cobabe Ranch",
+    city: "Ogden Valley (off Wolf Creek Drive)",
+    lat: 41.3215, lng: -111.8330,
+    acres: "176 (marketing materials)",
+    units: "",
+    stage: "building",
+    status: "Townhomes Phase 1 (8 units) before the county Dec. 10, 2025; lots listed for sale in 2026",
+    summary: "Marketed as a 176-acre master-planned community that allows short-term rentals.",
+    link: "https://weber-county-hive.github.io/Transparency/weber-hive-then-vs-now-part-2.html#watch",
+    plain: false,
+    updated: "Sept 29, 2026"
+  },
+  {
+    id: "snowbasin",
+    name: "Snowbasin (Mount Ogden PIDs 1–3)",
+    city: "Huntsville area",
+    lat: 41.2160, lng: -111.8569,
+    acres: "",
+    units: "",
+    stage: "financing",
+    status: "Up to $300 million in borrowing authority since 2022; 2026 draft budgets list no debt",
+    summary: "Three public infrastructure districts that can borrow and tax future residents. None has issued debt, per its draft budgets.",
+    link: "https://weber-county-hive.github.io/PIDS-Utah/mount-ogden-pid-ratchford.html",
+    plain: false,
+    updated: "Oct 17, 2026"
+  },
+  {
+    id: "longhorn",
+    name: "Longhorn Estates, Meibos and West Creek (Pat Burns)",
+    city: "West Weber (unincorporated)",
+    lat: 41.2200, lng: -112.0850,
+    acres: "",
+    units: "Longhorn up to 116 lots (94 after transfer); Meibos 208 lots",
+    stage: "approved",
+    status: "Meibos rezone approved 3–0 March 17, 2026; West Creek proposal at an Oct. 6, 2026 work session",
+    summary: "22 lots moved from Longhorn to Meibos. Longhorn has its own financing district, formed on an owner petition with the protest period waived.",
+    link: "https://weber-county-hive.github.io/followthedeed/weber-hive-west-weber-network.html",
+    plain: false,
+    updated: "Oct 17, 2026"
+  },
+  {
+    id: "jdc",
+    name: "JDC Ranch (Nilson Homes)",
+    city: "West Weber (unincorporated)",
+    lat: 41.2700, lng: -112.0750,
+    acres: "",
+    units: "no more than 1,000 (2024 recommendation)",
+    stage: "approved",
+    status: "Recommended 5–0 by the Western Weber Planning Commission July 9, 2024; recorded agreement terms not yet checked",
+    summary: "Units above 725 were to be \"attainable,\" with a starting price no higher than $400,000.",
+    link: "https://weber-county-hive.github.io/Transparency/weber-hive-then-vs-now-part-2.html#watch",
+    plain: false,
+    updated: "Sept 29, 2026"
+  },
+  {
+    id: "bennet",
+    name: "Bennet (formerly Gibson Farms)",
+    city: "West Weber (unincorporated)",
+    lat: 41.2330, lng: -112.1150,
+    acres: "550",
+    units: "up to 6 per acre under the agreement's formula",
+    stage: "approved",
+    status: "New TN-Bennet zone and development agreement with BlackPine, LLC before the County Commission Aug. 12, 2025",
+    summary: "550 acres between 4700 West and the Weber River. The Western Weber Planning Commission recommended it unanimously, adding two pedestrian bridges over the river.",
+    link: "",
+    plain: false,
+    updated: "Aug 18, 2026"
+  },
+  {
+    id: "herrick",
+    name: "Herrick Estates (Pat Burns)",
+    city: "West-Central Weber (unincorporated)",
+    lat: 41.2370, lng: -112.0530,
+    acres: "about 32",
+    units: "93 single-family",
+    stage: "approved",
+    status: "Rezone ZMA 2025-01 before the County Commission July 1, 2025",
+    summary: "A-1 to R1-15 at about 601 South 3600 West. The development agreement names Lync Holdings LLC as master developer.",
+    link: "https://weber-county-hive.github.io/followthedeed/weber-hive-west-weber-network.html",
+    plain: false,
+    updated: "Aug 18, 2026"
+  },
+  {
+    id: "sage-creek",
+    name: "Sage Creek Subdivision (Lync)",
+    city: "Plain City",
+    lat: 41.3150, lng: -112.0900,
+    acres: "",
+    units: "30 lots",
+    stage: "approved",
+    status: "Discussed by the Plain City Council Oct. 16, 2025; road agreement with Weber County for 3600 North",
+    summary: "The developer agreed to widen part of 3600 North and share later rebuild costs based on its impact.",
+    link: "https://weber-county-hive.github.io/followthedeed/weber-hive-west-weber-network.html",
+    plain: false,
+    updated: "Sept 8, 2026"
+  },
+  {
+    id: "plain-city-annex",
+    name: "Plain City island annexation",
+    city: "Plain City",
+    lat: 41.2950, lng: -112.0650,
+    acres: "",
+    units: "",
+    stage: "approved",
+    status: "Interlocal agreement approved by Plain City April 16, 2026: county road work on 2200 North, then annexation",
+    summary: "Three unincorporated areas join Plain City. One section is mostly lots owned by Nilson Homes and JDC Community LLC.",
+    link: "",
+    plain: false,
+    updated: "Aug 18, 2026"
+  }
+];

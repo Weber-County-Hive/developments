@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developments in Weber County | The Weber County Hive</title>
+<meta name="description" content="A map of large housing developments, annexations and financing districts in Weber County, Utah, with links to public records and Hive case files.">
+<link rel="icon" type="image/png" href="hive-bee.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="topbar"><div class="wrap"><span>DEVELOPMENTS · WEBER COUNTY</span><a href="https://weber-county-hive.github.io/Transparency/">Transparency case files →</a></div></div>
+
+<header class="band"><div class="wrap">
+  <div class="kicker">Developments · Map</div>
+  <h1 class="title">What's Being Built in Weber County</h1>
+  <p class="dek">Large housing projects, annexations and the financing districts behind them, on one map. Each one links to the public records and to the Hive's reporting.</p>
+  <span class="caselabel">Weber County, Utah</span>
+  <p class="hs-date">Posted Oct. 22, 2026 · Updated Oct. 22, 2026</p>
+</div></header>
+
+<div class="wrap">
+<section class="section" id="map-sec">
+  <h2>The map</h2>
+  <p>Tap a pin to see the project. Pins are approximate. They mark the general area, not parcel lines.</p>
+  <div class="legend" id="legend"></div>
+  <div id="map" role="region" aria-label="Map of developments in Weber County"></div>
+</section>
+
+<section class="section" id="list">
+  <h2>Every project on the map</h2>
+  <div class="filters" id="filters"><input id="q" type="search" placeholder="Search by name, city or developer" aria-label="Search projects"></div>
+  <div class="dev-list" id="devs"></div>
+</section>
+
+<section class="section" id="connected">
+  <h2>Where this connects</h2>
+  <p>Growth shows up on your tax bill. These Hive pages follow the money.</p>
+  <div class="hs-cards">
+    <a href="https://weber-county-hive.github.io/Transparency/weber-county-tax-increases-since-2019.html"><b>Every Weber County Property Tax Increase Since 2019</b><span>Transparency: the full list</span></a>
+    <a href="https://weber-county-hive.github.io/Transparency/weber-hive-5th5th-sales-tax.html"><b>Weber County's New Sales Tax</b><span>Transparency: a public vote, but no vote by the public</span></a>
+    <a href="https://weber-county-hive.github.io/Transparency/weber-fire-district-growth.html"><b>Paying for the Next Station</b><span>Transparency: how Weber Fire District funds growth</span></a>
+    <a href="https://weber-county-hive.github.io/Transparency/weber-fire-district-annexation.html"><b>A New Line on the Bill</b><span>Transparency: Roy and Riverdale fire annexation</span></a>
+    <a href="https://weber-county-hive.github.io/Transparency/weber-hive-then-vs-now.html"><b>Then vs. Now</b><span>Transparency: earlier plans and later approvals in Ogden Valley</span></a>
+    <a href="https://weber-county-hive.github.io/PIDS-Utah/weber-pid-guide.html"><b>Weber County PID Guide</b><span>PIDS-Utah: districts that can borrow and tax future owners</span></a>
+    <a href="https://weber-county-hive.github.io/Taxation/"><b>Taxation</b><span>The Hive's tax pages</span></a>
+    <a href="https://weber-county-hive.github.io/utah-maps/"><b>Utah Maps</b><span>The Hive's other maps</span></a>
+    <a href="https://weber-county-hive.github.io/followthedeed/"><b>Follow the Deed</b><span>Who owns the land, and who's connected</span></a>
+  </div>
+</section>
+
+<section class="section" id="add" style="border-bottom:none">
+  <h2>Know of one we missed?</h2>
+  <p>Send the project name, the city and a link to an agenda or notice to the Hive on <a href="https://webercountyhive.substack.com/">Substack</a>. We add a project when we find a public record for it.</p>
+  <p class="hs-updates">Posted Oct. 22, 2026 with 12 projects. Public records and news only.</p>
+</section>
+</div>
+
+<footer><div class="wrap"><div>THE WEBER COUNTY HIVE · DEVELOPMENTS</div><div>Independent accountability journalism. Public records only. We report; you decide.</div></div></footer>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="developments-data.js"></script>
+<script>
+(function(){
+  var STAGES={proposed:{label:"Proposed",c:"#B08D57"},approved:{label:"Approved",c:"#4F6F3F"},building:{label:"Building",c:"#22392B"},financing:{label:"Financing district",c:"#8A4B2A"}};
+  function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function href(d){return d.link||""}
+  var list=document.getElementById("devs"),legend=document.getElementById("legend"),filters=document.getElementById("filters"),q=document.getElementById("q");
+  var active="all";
+
+  legend.innerHTML=Object.keys(STAGES).map(function(k){return '<span><i class="dot" style="background:'+STAGES[k].c+'"></i>'+STAGES[k].label+'</span>'}).join("");
+  var btns=[["all","All"]].concat(Object.keys(STAGES).map(function(k){return [k,STAGES[k].label]}));
+  btns.forEach(function(b){var el=document.createElement("button");el.type="button";el.textContent=b[1];el.dataset.k=b[0];el.setAttribute("aria-pressed",b[0]==="all");el.onclick=function(){active=b[0];[].forEach.call(filters.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x.dataset.k===active)});draw()};filters.insertBefore(el,q)});
+
+  var map=null,markers={};
+  if(window.L){
+    map=L.map("map",{scrollWheelZoom:false}).setView([41.27,-111.96],10);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+    DEVELOPMENTS.forEach(function(d){
+      var s=STAGES[d.stage]||STAGES.proposed;
+      var m=L.circleMarker([d.lat,d.lng],{radius:10,color:"#fff",weight:2,fillColor:s.c,fillOpacity:.95}).addTo(map);
+      var pop='<b>'+esc(d.name)+'</b><br>'+esc(d.city)+(d.units?'<br>Units: '+esc(d.units):'')+'<br><a href="#dev-'+d.id+'">Details below</a>'+(href(d)?' · <a href="'+esc(href(d))+'">Read more</a>':'');
+      m.bindPopup(pop);markers[d.id]=m;
+    });
+  }else{document.getElementById("map").innerHTML='<p style="padding:20px">The map could not load. The full list is below.</p>'}
+
+  function draw(){
+    var t=(q.value||"").toLowerCase().trim();
+    var shown=DEVELOPMENTS.filter(function(d){
+      var okS=active==="all"||d.stage===active;
+      var hay=[d.name,d.city,d.summary,d.status,d.units].join(" ").toLowerCase();
+      return okS&&(!t||hay.indexOf(t)>-1);
+    });
+    list.innerHTML=shown.length?shown.map(function(d){
+      var s=STAGES[d.stage]||STAGES.proposed;
+      var facts=[];if(d.acres)facts.push('<span><b>Acres:</b> '+esc(d.acres)+'</span>');if(d.units)facts.push('<span><b>Units:</b> '+esc(d.units)+'</span>');
+      var go=[];
+      if(d.link)go.push('<a class="main" href="'+esc(d.link)+'">Read the case file</a>');
+      if(d.plain&&d.link)go.push('<a href="'+esc(d.link.replace(/\.html$/,"-plain.html"))+'">Plain words</a>');
+      if(map)go.push('<button type="button" data-pin="'+d.id+'">Show on map</button>');
+      return '<article class="dev" id="dev-'+d.id+'" style="border-left-color:'+s.c+'"><h3>'+esc(d.name)+' <span class="tag" style="background:'+s.c+'">'+s.label+'</span></h3><div class="where">'+esc(d.city)+'</div>'+(facts.length?'<div class="facts">'+facts.join("")+'</div>':'')+'<p>'+esc(d.summary)+'</p><p class="st"><b>Where it stands:</b> '+esc(d.status)+'</p><div class="where">Checked '+esc(d.updated)+(d.link?'':' · Case file coming')+'</div>'+(go.length?'<div class="go">'+go.join("")+'</div>':'')+'</article>';
+    }).join(""):'<p>No projects match. Try another word.</p>';
+    if(map){
+      DEVELOPMENTS.forEach(function(d){var on=shown.indexOf(d)>-1;var m=markers[d.id];if(on&&!map.hasLayer(m))m.addTo(map);if(!on&&map.hasLayer(m))map.removeLayer(m)});
+    }
+  }
+  list.addEventListener("click",function(e){var b=e.target.closest("[data-pin]");if(!b||!map)return;var m=markers[b.dataset.pin];document.getElementById("map").scrollIntoView({behavior:"smooth",block:"center"});map.setView(m.getLatLng(),13);m.openPopup()});
+  q.addEventListener("input",draw);
+  draw();
+})();
+</script>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

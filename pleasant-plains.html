@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pleasant Plains: Up to 3,500 Homes Proposed in Plain City | The Weber County Hive</title>
+<meta name="description" content="Pleasant Plains would allow up to 3,500 homes and 300 acres of commercial and industrial use on about 1,558 acres in Plain City. The council must approve or deny by Nov. 23, 2026. Public hearing Nov. 12 at 7 p.m.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pleasant Plains: Up to 3,500 Homes Proposed in Plain City">
+<meta property="og:description" content="Public hearing Thursday, Nov. 12, 7 p.m., Plain City Hall. The council must approve or deny by Nov. 23. What the draft says and the questions residents can ask.">
+<meta property="og:url" content="https://weber-county-hive.github.io/developments/pleasant-plains.html">
+<meta property="og:image" content="https://weber-county-hive.github.io/developments/pleasant-plains-social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="hive-bee.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+.pp-attend{background:var(--band);color:#F4F1E8;border-left:8px solid var(--sand);padding:20px 24px;margin:22px 0}
+.pp-attend h2{color:#fff;font-size:1.5rem;margin-bottom:8px}
+.pp-attend .big{font-size:1.25rem;font-weight:700;line-height:1.4}
+.pp-attend p{max-width:70ch;margin:8px 0 0}
+.pp-attend a{color:var(--accent-lt)}
+.pp-steps{list-style:none;padding:0 !important;margin:16px 0;display:grid;gap:0}
+.pp-steps li{position:relative;background:#fff;border:2px solid var(--accent);border-radius:8px;padding:14px 18px 14px 64px;font-size:1.08rem;max-width:none;margin-bottom:28px}
+.pp-steps li:last-child{margin-bottom:0}
+.pp-steps li:not(:last-child)::after{content:"↓";position:absolute;left:50%;bottom:-27px;font-size:1.3rem;color:var(--sand);font-weight:bold}
+.pp-steps .n{position:absolute;left:14px;top:12px;width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;font-family:Arial,sans-serif;font-weight:bold;display:flex;align-items:center;justify-content:center}
+.pp-steps .w{display:block;font-family:Arial,sans-serif;font-size:.85rem;font-weight:bold;color:var(--accent);text-transform:uppercase;letter-spacing:.04em}
+.pp-steps li.hot{border-color:var(--sand);background:var(--paper-2)}
+.pp-steps li.hot .n{background:var(--sand)}
+.pp-out{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}
+.pp-out div{background:#fff;border:1px solid var(--line);border-top:5px solid var(--accent);padding:14px 16px}
+.pp-out b{display:block;margin-bottom:4px}
+#ppmap{height:340px;border:1px solid var(--line);border-radius:6px;margin:12px 0 6px;z-index:0}
+.mapnote{font-family:Arial,sans-serif;font-size:.85rem;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="topbar"><div class="wrap"><span>DEVELOPMENTS · CASE FILE</span><a href="index.html">← Developments map</a></div></div>
+
+<header class="band"><div class="wrap">
+  <div class="kicker">Developments · Case File</div>
+  <h1 class="title">Pleasant Plains: Up to 3,500 Homes Proposed in Plain City</h1>
+  <p class="dek">A draft agreement would allow up to 3,500 homes and 300 acres of commercial and industrial use on about 1,558 acres. The developer has set a state-law clock: the City Council must approve or deny it by Monday, Nov. 23, 2026. The public hearing is Thursday, Nov. 12, at 7 p.m.</p>
+  <span class="caselabel">Plain City</span>
+  <p class="hs-date">CASE 2026-DEV-02 · Posted Nov. 4, 2026 · Updated Nov. 4, 2026</p>
+</div></header>
+
+<div class="wrap">
+<div class="hs-plain">New to this? <a class="hs-btn" href="pleasant-plains-plain.html">Read it in plain words</a> About 500 words.</div>
+
+<div class="pp-attend" id="attend">
+  <h2>Come to the public hearing</h2>
+  <div class="big">Thursday, Nov. 12, 2026 · 7 p.m.<br>Plain City Hall, 4160 W. 2200 North</div>
+  <p>The city's notice says the Planning Commission and City Council want to hear from residents. This is the public hearing before the council's Nov. 23 deadline to approve or deny. Questions about speaking or sending written comments: Plain City offices, (801) 731-4908.</p>
+  <p><a href="https://www.plaincityutah.gov/feed/3025">City notice</a> · <a href="#ask">Questions you can bring</a></p>
+</div>
+
+<nav class="hs-toc" aria-label="On this page"><b>On this page</b><a href="#short">The short version</a><a href="#what">What's proposed</a><a href="#who">Who's behind it</a><a href="#how">How the decision works</a><a href="#stands">Where it stands</a><a href="#no">Can the city say no?</a><a href="#county">Can it go to the county?</a><a href="#pid">PID vs. IFD</a><a href="#compare">How it compares</a><a href="#questions">Questions about the draft</a><a href="#unknown">What we don't know yet</a><a href="#words">Words to know</a><a href="#ask">Questions to ask</a><a href="#behind">Behind this piece</a><a href="#sources">Sources</a></nav>
+
+<section class="section" id="short">
+  <h2>The short version</h2>
+  <div class="hs-short"><ul>
+    <li>Pleasant Plains is a proposed master development agreement between Plain City and Cole West Land Partners, on land owned by the Jackson family and Pleasant Plains Ranch, Inc.</li>
+    <li>The Oct. 2, 2026 draft allows up to 3,500 homes and up to 300 acres of commercial uses, "including, without limitation, retail, office, industrial, hospitality, and entertainment."</li>
+    <li>On Oct. 7 the owners and developer served a letter under Utah Code 10-20-905 requiring the City Council to approve or deny by Nov. 23, 2026.</li>
+    <li>State law and Plain City's own code both let the council say no. If it denies, it must give its reasons in writing.</li>
+    <li>The public hearing is Thursday, Nov. 12, at 7 p.m. at City Hall.</li>
+  </ul></div>
+  <div class="stat-row">
+    <div class="stat"><div class="num">up to 3,500</div><div class="label">Homes</div></div>
+    <div class="stat"><div class="num">300</div><div class="label">Commercial acres</div></div>
+    <div class="stat"><div class="num">~1,558</div><div class="label">Total acres</div></div>
+    <div class="stat"><div class="num">Nov. 23</div><div class="label">Decision deadline</div></div>
+  </div>
+</section>
+
+<section class="section" id="what">
+  <h2>What's proposed</h2>
+  <p>The legal description in the draft covers three parcels totaling about 1,558 acres (1,500.5, 57.9 and 0.35 acres), bounded in places by 3900 West, 4200 West, the Little Mountain Rail Trail and First and Second Salt Creek.</p>
+  <div id="ppmap" role="img" aria-label="Map showing the approximate area of Pleasant Plains in Plain City"></div>
+  <p class="mapnote">The pin is approximate, placed from the legal description's roads and section lines. It is not a parcel boundary.</p>
+  <p>What the Oct. 2, 2026 draft says:</p>
+  <div class="wide"><table class="ledger">
+    <tr><th>Topic</th><th>What the draft says</th><th>Section</th></tr>
+    <tr><td>Homes</td><td>Up to <b>3,500</b>. Caps by type: 1,000 stacked flats, 1,000 attached, 400 Level 1, 400 Level 2, 2,500 Level 3, 3,000 Level 4. Stacked plus attached can't exceed 45% of the total (1,575)</td><td>4.02, 4.04</td></tr>
+    <tr><td>Accessory dwellings</td><td>Detached ADUs allowed on lots of 8,000 sq ft or more. ADUs "shall not count toward the Maximum Residential Density"</td><td>4.09</td></tr>
+    <tr><td>Commercial</td><td>Up to <b>300 acres</b>, including retail, office, industrial, hospitality and entertainment</td><td>4.05</td></tr>
+    <tr><td>Phasing</td><td>The developer may change phase boundaries, size and intensity "without seeking an approved Modification Application or other City approval," within the caps</td><td>4.03, 7.01</td></tr>
+    <tr><td>Next to existing homes</td><td>Land within 300 feet of a neighboring residential or farm lot with a house gets the lowest densities (Levels 3–4)</td><td>4.03</td></tr>
+    <tr><td>Corridor road</td><td>Land is reserved for the planned West Weber Corridor. If UDOT hasn't set the alignment in 5 years, the developer builds a major collector road across the property instead</td><td>4.06</td></tr>
+    <tr><td>Wetlands</td><td>Army Corps wetland findings "shall not trigger" a reduction in the home caps</td><td>5.03</td></tr>
+    <tr><td>Other studies</td><td>Traffic, sewer, water, drainage and soil studies can lower the 3,500 cap to what the study supports. The cut is not proportional to acreage</td><td>5.08</td></tr>
+    <tr><td>Water</td><td>The city can't require water rights except for parks. After the first plat, a provider's "will-serve" letter is the only water check</td><td>5.01(a)</td></tr>
+    <tr><td>Sewer</td><td>17.5 acres for a treatment plant, within 60 days of the first preliminary plat</td><td>5.01(b)</td></tr>
+    <tr><td>Parks</td><td>Two public parks averaging 20 acres combined, plus 5 acres for a rec center. First park by the 500th home permit; second by the 1,750th</td><td>5.02</td></tr>
+    <tr><td>Costs</td><td>The developer pays only its "Proportionate Share" of citywide improvements. City reimbursements come only from fees collected, not the general fund</td><td>5.04–5.05</td></tr>
+    <tr><td>PID/SID/SAA</td><td>The developer "may explore" them. Each needs a separate council vote</td><td>5.06</td></tr>
+    <tr><td>Vesting</td><td>The city can't apply future rules that reduce density or commercial acreage, change setbacks, or add open space or exactions</td><td>8.01</td></tr>
+    <tr><td>Affordable units</td><td>The city "shall not require deed-restricted moderate income units" without agreement</td><td>8.01</td></tr>
+    <tr><td>Term</td><td>10 years, renewing automatically in 10-year blocks, <b>capped at 30 years</b>. The council would declare this overrides city code 11-9-4.E</td><td>12.01</td></tr>
+  </table></div>
+  <p><b>Blanks still in the Oct. 2 draft:</b> the garage setback distance, how long the developer maintains parks, the minimum commercial acreage, the home count in a second park trigger in section 7.01 ("1, residential unit"), and the section number for road compensation ("Section __").</p>
+  <h3 style="font-size:1.15rem;margin:18px 0 6px">What Cole West told the water district</h3>
+  <p>At the Bona Vista Water Improvement District board meeting on Aug. 31, 2026, according to the minutes:</p>
+  <ul>
+    <li>Cole West said "it has more than 3,000 acre-feet of water rights available for consideration."</li>
+    <li>Cole West suggested "a dedication rate of approximately 0.25 might be more appropriate than the current 0.34 rate." District staff member Greg Seegmiller "disagreed with certain aspects of ColeWest's analysis."</li>
+    <li>The district's legal counsel said "the proposal was premature for the Board to make a determination." The board took no vote and asked Cole West to submit a proposal.</li>
+  </ul>
+  <div class="callout">The Oct. 7 letter says the developer will deliver a "signature-ready" agreement at least five business days before the meeting where the council takes final action. That version may differ from the Oct. 2 draft described here.</div>
+</section>
+
+<section class="section" id="who">
+  <h2>Who's behind it</h2>
+  <p>As the Oct. 7, 2026 letter names them:</p>
+  <ul>
+    <li><b>Landowners:</b> Pleasant Plains Ranch, Inc.; Lynn L. Jackson as successor trustee of the Kenneth L. Jackson and Linda W. Jackson revocable trusts; and Jackson RE Properties, LLC.</li>
+    <li><b>Developer:</b> Cole West Land Partners, LLC, of Centerville.</li>
+    <li><b>Signed by:</b> Lynn Jackson, Craig Jackson and Logan Fawcett (Cole West), through DocuSign.</li>
+    <li><b>Parcels:</b> 13 Weber County parcel numbers, listed in the letter.</li>
+  </ul>
+  <h3 style="font-size:1.15rem;margin:18px 0 6px">The company chain, from Utah business records</h3>
+  <div class="wide"><table class="ledger">
+    <tr><th>Company</th><th>Formed</th><th>Manager</th><th>Registered agent</th></tr>
+    <tr><td>Cole West Land Partners, LLC (14619886-0160)</td><td>Oct. 10, 2025</td><td>Cole West Entity Services, LLC</td><td>Cole West Entity Services, LLC</td></tr>
+    <tr><td>Cole West Entity Services, LLC (13436868-0160)</td><td>June 2, 2023</td><td>Cole West, LLC</td><td>Colin Wright</td></tr>
+  </table></div>
+  <p>All list 610 N. 800 W., Centerville. Cole West Land Partners was formed about five and a half months before the Pleasant Plains petition was filed (March 31, 2026). A Sept. 22, 2026 Cole West press release quotes Colin Wright as the company's founder.</p>
+  <h3 style="font-size:1.15rem;margin:18px 0 6px">Cole West's other projects</h3>
+  <p>Cole West's website and press releases list about two dozen communities. In Weber County: theCAROLINE and theHAZEL townhomes in Roy, and SAGE estate homes in Huntsville. Elsewhere: SaltRock and Lone Tree (Syracuse), theHOLLY (Kaysville), theAUDREY (Woods Cross), Farmstead, theVIOLET and theANA (Farmington), Overlook at THE RANGE (Mountain Green), theMONROE, theIRIS and theROW (Salt Lake City), theIVY (Millcreek), theLANA (Provo), and Amara, Solis, Rise, Cielo, Vera and others in Washington County. The company also lists work in Dallas, Texas.</p>
+  <p>Most are under 250 homes. The largest found is <b>Echo</b> in Erda, 1,260 lots on 325 acres, bought in October 2025 by Cole West Land Company, a Cole West subsidiary, with Logan Fawcett as president. Pleasant Plains, at up to 3,500 homes plus 300 commercial acres, would be close to three times that size. No PID was found tied to these projects in the records reviewed; development agreements were not checked project by project.</p>
+</section>
+
+<section class="section" id="how">
+  <h2>How the decision works</h2>
+  <ol class="pp-steps">
+    <li><span class="n">1</span><span class="w">March 31, 2026</span>The owners and developer petition Plain City for the agreement and pay a $20,000 fee.</li>
+    <li><span class="n">2</span><span class="w">Oct. 7, 2026</span>They serve a letter under Utah Code 10-20-905 starting a 45-day clock and asking for a written decision.</li>
+    <li class="hot"><span class="n">3</span><span class="w">Thursday, Nov. 12, 7 p.m.</span>Public hearing at City Hall. Residents can speak.</li>
+    <li class="hot"><span class="n">4</span><span class="w">By Monday, Nov. 23</span>The City Council must approve or deny.</li>
+  </ol>
+  <h3 style="font-size:1.15rem;margin:18px 0 6px">What can happen next</h3>
+  <div class="pp-out">
+    <div><b>Approve</b>The agreement becomes land use law for the property for up to 30 years.</div>
+    <div><b>Deny</b>The council states its reasons in writing and on the record, which can be the minutes.</div>
+    <div><b>No action</b>The developer can ask a district court to step in within 30 days. The law allows no money damages under this section.</div>
+  </div>
+</section>
+
+<section class="section" id="stands">
+  <h2>Where it stands</h2>
+  <p>Nothing has been approved. The dates below come from the Oct. 7 letter and city notices.</p>
+  <ul class="hs-upd">
+    <li><span class="d">Nov. 23, 2026</span>Deadline for the City Council to approve or deny.</li>
+    <li><span class="d">Nov. 12, 2026, 7 p.m.</span>Public hearing at City Hall.</li>
+    <li><span class="d">Nov. 5, 2026, 6:30 p.m.</span>Regular City Council meeting. Check the agenda for whether Pleasant Plains is on it.</li>
+    <li><span class="d">Oct. 7, 2026</span>The owners and developer serve the 45-day letter. They "do not agree to extend" the deadline.</li>
+    <li><span class="d">Oct. 2, 2026</span>Date of the latest draft agreement the Hive has read.</li>
+    <li><span class="d">Sept. 29, 2026</span>A council and Planning Commission committee meets with the developer, according to the letter.</li>
+    <li><span class="d">Aug. 31, 2026</span>Cole West discusses Pleasant Plains with the Bona Vista Water Improvement District board. The minutes say Cole West is "under contract to purchase the property" and describe "approximately 3,500 residential units over an estimated 25-year buildout." No vote; the board asks for a written proposal.</li>
+    <li><span class="d">Aug. 12, 2026</span>The committee's first meeting, according to the letter.</li>
+    <li><span class="d">July 16, 2026</span>Joint work session of the City Council and Planning Commission; the committee is formed.</li>
+    <li><span class="d">April 1, 2026</span>The $20,000 fee is paid and the city accepts the petition for review.</li>
+    <li><span class="d">March 31, 2026</span>The petition is filed.</li>
+    <li><span class="d">Oct. 10, 2025</span>Cole West Land Partners, LLC is registered with the state.</li>
+  </ul>
+</section>
+
+<section class="section" id="no">
+  <h2>Can the city say no?</h2>
+  <p><b>Yes, the records support that.</b></p>
+  <ul>
+    <li>The state law the developer invoked says the council "shall take final action by approving or denying the petition" (Utah Code 10-20-905(2)(c)(ii)).</li>
+    <li>Approving a development agreement like this one is a legislative act. Courts presume these decisions are valid and review them only for whether they are "reasonably debatable" (10-20-1109).</li>
+    <li>Plain City's code says the city may reject a proposal "at any time before approval and for any reason" (City Code 11-9-4(A)).</li>
+    <li>Plain City's code lists the purpose of these agreements: projects that align with the General Plan, improve more than 100 acres, and offer "extreme benefits" to the city (11-9-1).</li>
+  </ul>
+  <div class="callout">If the council denies, the developer has asked for a written decision, so the reasons must be stated in writing and on the record (10-20-905(2)(d)). This page is a summary of public law, not legal advice. The city attorney should confirm.</div>
+</section>
+
+<section class="section" id="county">
+  <h2>If the city says no, can the land go to the county?</h2>
+  <p><b>Not directly.</b> Weber County's zoning applies only to unincorporated land (Utah Code 17-79-101). To fall under county rules, the land would first have to leave Plain City through <b>disconnection</b> (Utah Code 10-2-501 to 510):</p>
+  <ol>
+    <li>Owners of more than 50% of the private land in the area petition.</li>
+    <li>The Plain City Council holds a public hearing and decides.</li>
+    <li>If the council says no, the petitioner can go to district court and must show, among other things, that "justice and equity require" it.</li>
+    <li>It takes effect only when the lieutenant governor issues a certificate.</li>
+  </ol>
+  <p>No 2024–2026 state law was found that lets the state overrule a city's denial of an agreement like this one.</p>
+</section>
+
+<section class="section" id="pid">
+  <h2>PID vs. IFD</h2>
+  <p>The draft does not mention an Infrastructure Financing District (IFD). It says the developer "may explore" a Public Infrastructure District (PID), Special Improvement District or Special Assessment Area, each needing a separate council vote (section 5.06).</p>
+  <div class="wide"><table class="ledger">
+    <tr><th></th><th>PID (Utah Code 17D-4)</th><th>IFD (H.B. 13, 2024; now 17D-5)</th></tr>
+    <tr><td>Who starts it</td><td>The city or county approves creation</td><td>A petition signed by 100% of the surface owners</td></tr>
+    <tr><td>Can the city refuse?</td><td>Yes. Creation is at the city's "sole discretion"</td><td>Not confirmed whether a council vote is required</td></tr>
+    <tr><td>Who pays</td><td>Property owners in the district, up to .015 per dollar of taxable value</td><td>The assessment on each home must be paid before its certificate of occupancy</td></tr>
+    <tr><td>City zoning</td><td>The city keeps its zoning and planning authority</td><td>City land use rules are "not affected"</td></tr>
+  </table></div>
+</section>
+
+<section class="section" id="compare">
+  <h2>How it compares</h2>
+  <p>No Cole West development agreement was found posted online for another city. These are agreements found on public meeting sites.</p>
+  <div class="wide"><table class="ledger">
+    <tr><th>Agreement</th><th>Size</th><th>Term</th><th>If land can't be built on</th></tr>
+    <tr><td><b>Pleasant Plains</b> (Plain City, proposed)</td><td>Up to 3,500 homes + 300 ac commercial</td><td>10 yrs, auto-renews to 30</td><td>Wetlands don't lower caps; other studies can</td></tr>
+    <tr><td>Westbridge Meadows (Weber Co., 2025 draft)</td><td>Up to 13,200 units, ~1,400 ac</td><td>30 yrs + 10 if no default</td><td>"or fewer if the land cannot accommodate them"</td></tr>
+    <tr><td>Copper Cove (Erda, 2024)</td><td>374 units, ~200 ac</td><td>10 yrs, auto to 15</td><td>Not addressed</td></tr>
+    <tr><td>Sunset Flats (Eagle Mountain, 2018)</td><td>384 lots, ~238 ac</td><td>10 yrs, auto +5</td><td>Not addressed</td></tr>
+    <tr><td>Spring Run (Eagle Mountain, 2012)</td><td>Up to 1,016 units, ~520 ac</td><td>To 2030, then council vote</td><td>City "makes no guarantee" max units can be built</td></tr>
+    <tr><td>Hooper Crossing (Hooper, proposed 2026)</td><td>125 units, ~52 ac</td><td>Not in readable text</td><td>Not addressed</td></tr>
+  </table></div>
+  <ul>
+    <li>None of the agreements found sets a minimum density. Pleasant Plains doesn't either.</li>
+    <li>Every renewal clause found renews automatically if the developer is not in default. Spring Run is the only one where renewal ends with a council vote.</li>
+    <li>Westbridge sends undeveloped land back to its old zoning when the agreement ends. Pleasant Plains has no such clause.</li>
+  </ul>
+</section>
+
+<section class="section" id="questions">
+  <h2>Questions about the draft</h2>
+  <p>These questions have been raised about the agreement. They are open until the developer or the city answers them in public.</p>
+  <div class="hs-qa">
+    <div><b>Phasing and roads (4.03, 7.01)</b>If the developer can set the size and order of phases without city approval, how does the city keep building in step with roads and ways out of the area?</div>
+    <div><b>Density (4.04)</b>The four higher-density caps add up to 2,800 homes. The Oct. 2 draft adds a 45% cap on stacked and attached homes (1,575). Should there also be minimums for the lower-density levels, and does this mix fit the General Plan?</div>
+    <div><b>The corridor road (4.06)</b>If UDOT hasn't set the West Weber Corridor in five years, a collector road gets built across the property. Where would it connect, and should commercial and high-density building wait for the corridor?</div>
+    <div><b>Wetlands (5.03)</b>If land turns out to be wetlands and can't be built on, why shouldn't the number of homes go down?</div>
+    <div><b>Density per acre (5.08)</b>3,500 homes on about 1,558 acres is about 2.2 homes per acre overall. Does any per-acre figure the developer has given count parks, commercial land and unbuildable land?</div>
+    <div><b>Water (5.01(a))</b>Cole West told the Bona Vista water board it has more than 3,000 acre-feet of water rights "available for consideration." Are those shares of the type that can be used for homes and businesses, and what does the agreement require them to prove before building?</div>
+    <div><b>Sewer (5.01(b))</b>Does the 17.5-acre sewer site connect to Plain City's existing treatment plant? What is the plant's capacity, who pays to expand it, and would a PID be part of that?</div>
+    <div><b>Existing roads (5.01(c), 5.04)</b>Who pays to widen the roads residents already use to get in and out of the city?</div>
+    <div><b>Accessory dwellings (4.09)</b>The draft allows detached ADUs on lots of 8,000 square feet or more, and ADUs "shall not count toward the Maximum Residential Density." How does that compare with the city's current lot-size rules, and how many more homes could that add?</div>
+    <div><b>Setbacks and utilities (4.10, 5.01(e))</b>Are 12-foot front setbacks and the garage setback (still blank) enough for parked trucks, sidewalks and 10-foot utility easements? The draft names Dominion Energy as the gas provider; has that been updated?</div>
+    <div><b>Parks and "extreme benefits" (5.02)</b>Two parks and a rec center site add up to about 25 acres, under 2% of the land. City code calls for "extreme benefits." What are they?</div>
+    <div><b>PID (5.06)</b>Should the PID option stay in the agreement at all, and who would carry that debt?</div>
+    <div><b>Impact fee credits (5.06)</b>If land is dedicated to another public, religious or charitable group, the city would owe the developer equal value. Is that normal, and what could it cost?</div>
+    <div><b>Renewal (12.01)</b>Should the agreement renew automatically, or should each renewal come back to the council?</div>
+  </div>
+</section>
+
+<section class="section" id="unknown">
+  <h2>What we don't know yet</h2>
+  <ul>
+    <li>What the "signature-ready" version delivered before the final vote will say.</li>
+    <li>Which body will hold the vote on Nov. 12, and whether the council will vote that night or at a later meeting before Nov. 23.</li>
+    <li>What type the 3,000-plus acre-feet of water rights are, how many would be dedicated, and whether Cole West has sent Bona Vista its written proposal.</li>
+    <li>How Cole West Land Partners and Cole West Land Company (the Echo buyer) relate to each other beyond the shared Cole West name.</li>
+    <li>The current capacity of Plain City's sewer treatment plant.</li>
+    <li>The Exhibit C master plan map, which wasn't in the copy the Hive read.</li>
+    <li>Whether a newer version of state law changes 10-20-905. Several sections were read from Justia's copy; confirm on le.utah.gov.</li>
+  </ul>
+</section>
+
+<section class="section" id="words">
+  <h2>Words to know</h2>
+  <div class="hs-flips">
+    <button class="hs-flip" aria-expanded="false"><div class="ft">Master development agreement (MDA)</div><div class="fh">Tap to see</div><div class="fd">A contract between a city and a developer that sets what can be built, how much, and who pays, for a large area over many years. Once approved, it acts like law for that land.</div></button>
+    <button class="hs-flip" aria-expanded="false"><div class="ft">45-day letter</div><div class="fh">Tap to see</div><div class="fd">Under Utah Code 10-20-905, an applicant can require the council to approve or deny within 45 days.</div></button>
+    <button class="hs-flip" aria-expanded="false"><div class="ft">Vesting</div><div class="fh">Tap to see</div><div class="fd">Locking in today's rules for the project, so future city rules can't reduce what was approved.</div></button>
+    <button class="hs-flip" aria-expanded="false"><div class="ft">PID</div><div class="fh">Tap to see</div><div class="fd">Public Infrastructure District. A district that can borrow for roads and pipes and tax the future owners inside it to repay.</div></button>
+    <button class="hs-flip" aria-expanded="false"><div class="ft">Disconnection</div><div class="fh">Tap to see</div><div class="fd">When land leaves a city and goes back to the unincorporated county. It takes a petition, a city hearing and, if denied, a court case.</div></button>
+    <button class="hs-flip" aria-expanded="false"><div class="ft">Will-serve letter</div><div class="fh">Tap to see</div><div class="fd">A letter from a water or sewer provider saying it will serve a project.</div></button>
+  </div>
+</section>
+
+<section class="section" id="ask">
+  <h2>Questions to ask</h2>
+  <div class="hs-qa">
+    <div><b>Plain City Council</b>Will the signature-ready agreement be posted for residents before the vote, and will the council vote at a meeting after the Nov. 12 hearing?</div>
+    <div><b>Plain City Council</b>What "extreme benefits" does this agreement give current residents, as city code requires?</div>
+    <div><b>City engineer / public works</b>How much can the sewer plant handle today, and what would expanding it cost?</div>
+    <div><b>Cole West Land Partners</b>Which of the 3,000-plus acre-feet of water rights would be dedicated to this project, and what type are they?</div>
+    <div><b>Bona Vista Water Improvement District</b>Has Cole West submitted the written proposal the board asked for on Aug. 31, and what dedication rate will apply?</div>
+    <div><b>Cole West Land Partners</b>Will you add a rule that unbuildable land lowers the number of homes?</div>
+    <div><b>UDOT</b>When will the West Weber Corridor alignment through Plain City be set?</div>
+    <div><b>Weber School District</b>Which schools would serve up to 3,500 new homes, and do they have room?</div>
+  </div>
+</section>
+
+<section class="section" id="connected">
+  <h2>Where this connects</h2>
+  <div class="hs-cards">
+    <a href="index.html"><b>Developments map</b><span>Every project the Hive is tracking in Weber County</span></a>
+    <a href="altura.html"><b>Altura</b><span>Up to 1,637 proposed units in North Ogden</span></a>
+    <a href="https://weber-county-hive.github.io/PIDS-Utah/weber-pid-guide.html"><b>Weber County PID Guide</b><span>PIDS-Utah: districts that can tax future owners</span></a>
+    <a href="https://weber-county-hive.github.io/Transparency/weber-county-tax-increases-since-2019.html"><b>Every Weber County Property Tax Increase Since 2019</b><span>Transparency: who pays when growth needs roads and pipes</span></a>
+  </div>
+</section>
+
+<section class="section" id="behind">
+  <h2>Behind this piece</h2>
+  <div class="hs-counter">
+    <div><div class="n">3</div><div class="l">Pleasant Plains documents read in full</div></div>
+    <div><div class="n">7</div><div class="l">Other Utah agreements compared</div></div>
+    <div><div class="n">9</div><div class="l">State laws and city code sections checked</div></div>
+    <div><div class="n">2</div><div class="l">State business records read</div></div>
+    <div><div class="n">~155</div><div class="l">Searches and page reads</div></div>
+  </div>
+  <p class="hs-updates">Posted Nov. 4, 2026. A tip came in with the draft agreement, a written review of it and the developer's 45-day letter. The Hive read all three in full and checked them against state law and city code. No comment requested yet. Not legal advice.</p>
+</section>
+
+<section class="section" id="sources" style="border-bottom:none">
+  <details class="full-sources"><summary>Full sources</summary><div class="full-sources-body">
+    <p><b>Pleasant Plains documents (obtained by the Hive):</b> Pleasant Plains Master Development Agreement, Oct. 2, 2026 redline draft; a written review of the draft; Cole West and owners' 45-day letter, Oct. 7, 2026</p>
+    <p><a href="https://www.plaincityutah.gov/feed/3025">Plain City notice, Nov. 12, 2026 public hearing</a></p>
+    <p><a href="https://www.utah.gov/pmn/files/1495551.pdf">Bona Vista Water Improvement District board minutes, Aug. 31, 2026</a></p>
+    <p>Utah Division of Corporations business entity records: Cole West Land Partners, LLC (14619886-0160) and Cole West Entity Services, LLC (13436868-0160), viewed Oct. 26, 2026</p>
+    <p>Cole West, "New Homes in Northern Utah" community listing page, viewed Oct. 26, 2026</p>
+    <p>Cole West projects: <a href="https://www.ksl.com/article/51391457/utah-developers-announce-future-1260-home-community-in-erda">KSL, Echo (Oct. 19, 2025)</a> · <a href="https://www.utahbusiness.com/press-releases/2025/10/17/cole-west-land-company-echo-master-planned-community-erda-utah">Utah Business, Echo</a> · <a href="https://www.utahbusiness.com/press-releases/2026/09/22/cole-west-recognized-governor-cox-utah-first-homes-award-coral-canyon/">Utah Business, Amara (Sept. 22, 2026)</a> · <a href="https://www.stgeorgeutah.com/news/solis-and-rise-highlight-cole-wests-expansion-across-southern-utah-with-more-communities-to-come/article_17ea6d25-2afe-433f-9791-d1f4a637d363.html">St George News, Solis and Rise</a> · <a href="https://www.utahbusiness.com/press-releases/2026/04/22/cole-west-closes-38-homesites-northern-utah-new-community-davis-county/">Utah Business, Lone Tree and SaltRock</a> · <a href="https://www.utahbusiness.com/press-releases/2026/09/30/cole-west-launches-new-home-sales-theholly-kaysville-utah-west-davis/">Utah Business, theHOLLY</a></p>
+    <p><a href="https://www.utah.gov/pmn/files/1453215.pdf">Plain City Code Title 11, Chapter 9 (Ordinance 2025-09)</a></p>
+    <p><a href="https://law.justia.com/codes/utah/title-10/chapter-20/part-9/section-905/">Utah Code 10-20-905</a> · <a href="https://law.justia.com/codes/utah/title-10/chapter-20/part-11/section-1109/">10-20-1109</a> · <a href="https://le.utah.gov/xcode/Title10/Chapter20/C10-20_2025110620251206.pdf">Title 10, Chapter 20 (PDF)</a></p>
+    <p><a href="https://le.utah.gov/xcode/Title17/Chapter79/C17-79_2025110620251206.pdf">Utah Code Title 17, Chapter 79 (county land use)</a> · <a href="https://law.justia.com/codes/utah/title-10/chapter-2/part-5/">10-2-501 to 510 (disconnection)</a></p>
+    <p><a href="https://law.justia.com/codes/utah/title-17d/chapter-4/">Title 17D, Chapter 4 (PIDs)</a> · <a href="https://le.utah.gov/~2024/bills/hbillenr/HB0013.pdf">H.B. 13 (2024), IFDs</a> · <a href="https://le.utah.gov/Session/2026/bills/enrolled/HB0507.pdf">H.B. 507 (2026)</a></p>
+    <p>Comparison agreements: <a href="https://www.webercountyutah.gov/commission/documents/uploads/Westbridge.pdf">Westbridge Meadows</a> · <a href="https://www.utah.gov/pmn/files/1489549.pdf">Hooper Crossing</a> · <a href="https://www.utah.gov/pmn/files/1422081.pdf">Copper Cove</a> · <a href="https://eaglemountain.gov/wp-content/uploads/2024/10/mda-sunset-flats.pdf">Sunset Flats</a> · <a href="https://eaglemountain.gov/mda-spring-run-annexation">Spring Run</a></p>
+  </div></details>
+</section>
+</div>
+
+<footer><div class="wrap"><div>THE WEBER COUNTY HIVE · DEVELOPMENTS</div><div>Independent accountability journalism. Public records only. We report; you decide.</div></div></footer>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+try{var m=L.map('ppmap',{scrollWheelZoom:false}).setView([41.312,-112.105],12);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(m);
+L.circle([41.312,-112.105],{radius:1600,color:'#4F6F3F',fillOpacity:.15}).addTo(m).bindPopup('Pleasant Plains (approximate area)');
+L.marker([41.2985,-112.0860]).addTo(m).bindPopup('Plain City Hall, 4160 W. 2200 North<br>Hearing Nov. 12, 7 p.m.');}catch(e){}
+document.querySelectorAll('.hs-flip').forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-expanded',b.getAttribute('aria-expanded')==='true'?'false':'true')})});
+</script>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

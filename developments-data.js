@@ -22,6 +22,20 @@ const DEVELOPMENTS = [
     updated: "Oct 22, 2026"
   },
   {
+    id: "pleasant-plains",
+    name: "Pleasant Plains",
+    city: "Plain City",
+    lat: 41.3120, lng: -112.1050,
+    acres: "about 1,558",
+    units: "up to 3,500 proposed, plus 300 commercial acres",
+    stage: "proposed",
+    status: "Public hearing Nov. 12, 2026, 7 p.m., City Hall; City Council must approve or deny by Nov. 23, 2026 under a 45-day letter",
+    summary: "Cole West Land Partners and the Jackson family landowners seek a master development agreement for up to 3,500 homes and 300 acres of commercial and industrial use, renewing automatically up to 30 years.",
+    link: "pleasant-plains.html",
+    plain: true,
+    updated: "Nov 4, 2026"
+  },
+  {
     id: "nordic",
     name: "Nordic Valley (Nordic Village PIDs)",
     city: "Ogden Valley",

@@ -33,7 +33,7 @@ const DEVELOPMENTS = [
     summary: "Cole West Land Partners and the Jackson family landowners seek a master development agreement for up to 3,500 homes and 300 acres of commercial and industrial use, renewing automatically up to 30 years.",
     link: "pleasant-plains.html",
     plain: true,
-    updated: "Nov 4, 2026"
+    updated: "Oct 26, 2026"
   },
   {
     id: "nordic",

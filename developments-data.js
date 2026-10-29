@@ -109,7 +109,7 @@ const DEVELOPMENTS = [
     id: "longhorn",
     name: "Longhorn Estates, Meibos and West Creek (Pat Burns)",
     city: "West Weber (unincorporated)",
-    lat: 41.2200, lng: -112.0850,
+    lat: 41.2437, lng: -112.1523,
     acres: "",
     units: "Longhorn up to 116 lots (94 after transfer); Meibos 208 lots",
     stage: "approved",
@@ -117,7 +117,7 @@ const DEVELOPMENTS = [
     summary: "22 lots moved from Longhorn to Meibos. Longhorn has its own financing district, formed on an owner petition with the protest period waived.",
     link: "https://weber-county-hive.github.io/followthedeed/weber-hive-west-weber-network.html",
     plain: false,
-    updated: "Oct 17, 2026"
+    updated: "Oct 29, 2026"
   },
   {
     id: "jdc",
